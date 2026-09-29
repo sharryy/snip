@@ -130,7 +130,7 @@ final class EditorWindow: NSWindow, NSWindowDelegate, NSToolbarDelegate {
         case .save:
             return button(id, "square.and.arrow.down", "Save to folder & copy (⌘S)", #selector(saveAndClose))
         case .copy:
-            return button(id, "doc.on.doc", "Copy to clipboard (⏎)", #selector(copyAndClose))
+            return button(id, "doc.on.doc", "Copy to clipboard (⌘C or ⏎)", #selector(copyAndClose))
         default:
             return nil
         }
@@ -227,6 +227,7 @@ final class EditorView: NSView {
             return super.performKeyEquivalent(with: event)
         }
         switch key {
+        case "c": (window as? EditorWindow)?.copyAndClose(); return true
         case "s": (window as? EditorWindow)?.saveAndClose(); return true
         case "z": undoShape(); return true
         default: return super.performKeyEquivalent(with: event)

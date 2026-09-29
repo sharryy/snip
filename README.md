@@ -22,7 +22,7 @@ A small menu bar app for taking area screenshots, marking them up, and copying o
 
 - Rectangle, ellipse, line, arrow, and pen, with a color picker.
 - Drag any shape by its outline to move it. `⌘Z` undoes.
-- `⏎` copies the result to the clipboard. `⌘S` saves a PNG to `~/Pictures/Snips` and copies it.
+- `⌘C` (or `⏎`) copies the result to the clipboard without saving. `⌘S` saves a PNG to `~/Pictures/Snips` and copies it.
 
 ![Editor](docs/editor.png)
 
